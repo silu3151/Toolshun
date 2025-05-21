@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolTap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #1E1E2F;
+            color: #EAEAEA;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2B2D42;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .category {
+            grid-column: 1 / -1;
+            text-align: center;
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .tool-card {
+            background-color: #3A3D5B;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(255, 215, 0, 0.2);
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .tool-card:hover {
+            background-color: #FFD700;
+            color: #1E1E2F;
+        }
+        .tool-card i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .tool-card h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .tool-card button {
+            background-color: #FFD700;
+            color: #1E1E2F;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .tool-card button:hover {
+            background-color: #E6C200;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ToolTap</h1>
+    </header>
+    <div class="grid-container">
+        <!-- Image Tools -->
+        <h2 class="category">Image Tools</h2>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>Image Resizer</h2>
+            <button onclick="redirectToTool('Image Resizer')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>Image Compressor</h2>
+            <button onclick="redirectToTool('Image Compressor')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>Image to Base64 Converter</h2>
+            <button onclick="redirectToTool('Image to Base64 Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>Base64 to Image Converter</h2>
+            <button onclick="redirectToTool('Base64 to Image Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>Image Cropper</h2>
+            <button onclick="redirectToTool('Image Cropper')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>Image Rotator</h2>
+            <button onclick="redirectToTool('Image Rotator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>Image Converter</h2>
+            <button onclick="redirectToTool('Image Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>Image Color Picker</h2>
+            <button onclick="redirectToTool('Image Color Picker')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>Convert Image to Grayscale</h2>
+            <button onclick="redirectToTool('Convert Image to Grayscale')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>Image Border Generator</h2>
+            <button onclick="redirectToTool('Image Border Generator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>WebP Converter Tool</h2>
+            <button onclick="redirectToTool('WebP Converter Tool')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>Image Metadata Remover</h2>
+            <button onclick="redirectToTool('Image Metadata Remover')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>Sketch Image Tool</h2>
+            <button onclick="redirectToTool('Sketch Image Tool')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-image"></i>
+            <h2>Convert Image to PDF</h2>
+            <button onclick="redirectToTool('Convert Image to PDF')">Access Tool</button>
+        </div>
+
+        <!-- Text Tools -->
+        <h2 class="category">Text Tools</h2>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Word Counter</h2>
+            <button onclick="redirectToTool('Word Counter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Character Counter</h2>
+            <button onclick="redirectToTool('Character Counter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Letter Counter</h2>
+            <button onclick="redirectToTool('Letter Counter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Sentence Counter</h2>
+            <button onclick="redirectToTool('Sentence Counter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Paragraph Counter</h2>
+            <button onclick="redirectToTool('Paragraph Counter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Text Case Converter</h2>
+            <button onclick="redirectToTool('Text Case Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Remove Line Breaks Tool</h2>
+            <button onclick="redirectToTool('Remove Line Breaks Tool')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Text to Binary Converter</h2>
+            <button onclick="redirectToTool('Text to Binary Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Binary to Text Converter</h2>
+            <button onclick="redirectToTool('Binary to Text Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Text to ASCII Converter</h2>
+            <button onclick="redirectToTool('Text to ASCII Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>ASCII to Text Converter</h2>
+            <button onclick="redirectToTool('ASCII to Text Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Text to Hex Converter</h2>
+            <button onclick="redirectToTool('Text to Hex Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Hex to Text Converter</h2>
+            <button onclick="redirectToTool('Hex to Text Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Text to Morse Code Converter</h2>
+            <button onclick="redirectToTool('Text to Morse Code Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-font"></i>
+            <h2>Morse Code to Text Converter</h2>
+            <button onclick="redirectToTool('Morse Code to Text Converter')">Access Tool</button>
+        </div>
+
+        <!-- PDF Tools -->
+        <h2 class="category">PDF Tools</h2>
+        <div class="tool-card">
+            <i class="fas fa-file-pdf"></i>
+            <h2>PDF to Word</h2>
+            <button onclick="redirectToTool('PDF to Word')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-file-pdf"></i>
+            <h2>Word to PDF</h2>
+            <button onclick="redirectToTool('Word to PDF')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-file-pdf"></i>
+            <h2>PDF Compressor</h2>
+            <button onclick="redirectToTool('PDF Compressor')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-file-pdf"></i>
+            <h2>PDF Merger & Splitter</h2>
+            <button onclick="redirectToTool('PDF Merger & Splitter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-file-pdf"></i>
+            <h2>Documents Converter</h2>
+            <button onclick="redirectToTool('Documents Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-file-pdf"></i>
+            <h2>PDF Lock / Unlock</h2>
+            <button onclick="redirectToTool('PDF Lock / Unlock')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-file-pdf"></i>
+            <h2>eSign PDF</h2>
+            <button onclick="redirectToTool('eSign PDF')">Access Tool</button>
+        </div>
+
+        <!-- Finance Tools -->
+        <h2 class="category">Finance Tools</h2>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Loan Calculator</h2>
+            <button onclick="redirectToTool('Loan Calculator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>EMI Calculator</h2>
+            <button onclick="redirectToTool('EMI Calculator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Interest Calculator</h2>
+            <button onclick="redirectToTool('Interest Calculator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Savings Calculator</h2>
+            <button onclick="redirectToTool('Savings Calculator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Investment Return Calculator</h2>
+            <button onclick="redirectToTool('Investment Return Calculator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Retirement Calculator</h2>
+            <button onclick="redirectToTool('Retirement Calculator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>GST Calculator</h2>
+            <button onclick="redirectToTool('GST Calculator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Tax Calculator</h2>
+            <button onclick="redirectToTool('Tax Calculator')">Access Tool</button>
+        </div>
+
+        <!-- Converters -->
+        <h2 class="category">Converters</h2>
+        <div class="tool-card">
+            <i class="fas fa-exchange-alt"></i>
+            <h2>Length Converter</h2>
+            <button onclick="redirectToTool('Length Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-exchange-alt"></i>
+            <h2>Weight Converter</h2>
+            <button onclick="redirectToTool('Weight Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-exchange-alt"></i>
+            <h2>Area Converter</h2>
+            <button onclick="redirectToTool('Area Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-exchange-alt"></i>
+            <h2>Temperature Converter</h2>
+            <button onclick="redirectToTool('Temperature Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-exchange-alt"></i>
+            <h2>Speed Converter</h2>
+            <button onclick="redirectToTool('Speed Converter')">Access Tool</button>
+        </div>
+
+        <!-- Calculators -->
+        <h2 class="category">Calculators</h2>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Fuel Cost Calculator</h2>
+            <button onclick="redirectToTool('Fuel Cost Calculator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Distance Calculator</h2>
+            <button onclick="redirectToTool('Distance Calculator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Time Duration Calculator</h2>
+            <button onclick="redirectToTool('Time Duration Calculator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Unit Converter</h2>
+            <button onclick="redirectToTool('Unit Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Date Difference Calculator</h2>
+            <button onclick="redirectToTool('Date Difference Calculator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Discount Calculator</h2>
+            <button onclick="redirectToTool('Discount Calculator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Currency Converter</h2>
+            <button onclick="redirectToTool('Currency Converter')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Age Calculator</h2>
+            <button onclick="redirectToTool('Age Calculator')">Access Tool</button>
+        </div>
+        <div class="tool-card">
+            <i class="fas fa-calculator"></i>
+            <h2>Time Zone Converter</h2>
+            <button onclick="redirectToTool('Time Zone Converter')">Access Tool</button>
+        </div>
+    </div>
+    <script>
+        function redirectToTool(toolName) {
+            alert(`Redirecting to ${toolName}`);
+        }
+    </script>
+</body>
+  </html>
